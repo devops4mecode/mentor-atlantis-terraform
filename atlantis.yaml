@@ -15,3 +15,9 @@ workflows:
    plan:
      steps:
      - init
+  staging:
+   plan:
+     steps:
+     - init
+     - plan:
+         extra_args: ["-var-file", "stag.tfvars"]
