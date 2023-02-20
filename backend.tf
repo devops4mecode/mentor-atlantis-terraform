@@ -1,12 +1,12 @@
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "do4m-atlantis-backend"
+  bucket = "do4m-atlantis-server-backend"
   versioning {
     enabled = true
   }
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
-  name           = "do4m-atlantis-lock"
+  name           = "do4m-atlantis-server-lock"
   read_capacity  = 10
   write_capacity = 10
   hash_key       = "LockID"
