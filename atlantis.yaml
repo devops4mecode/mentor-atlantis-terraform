@@ -8,18 +8,10 @@ projects:
   workflow: staging
   terraform_version: v0.14.8
   autoplan:
-    enabled: true
+    enabled: false
   apply_requirements: [approved]
 workflows:
   production:
    plan:
      steps:
      - init
-     - plan:
-         extra_args: ["-var-file", "prod.tfvars"]
-  staging:
-   plan:
-     steps:
-     - init
-     - plan:
-         extra_args: ["-var-file", "stag.tfvars"]
