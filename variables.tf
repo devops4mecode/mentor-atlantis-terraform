@@ -7,7 +7,7 @@ variable "availability_zone" {
 }
 
 variable "ec2-type" {
-  default = "t3.medium"
+  default = "t3.micro"
 }
 
 variable "key-pair-name" {
