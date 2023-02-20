@@ -17,3 +17,7 @@ variable "key-pair-name" {
 variable "ami-id" {
   default = "ami-082b1f4237bd816a1" #Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2023-02-08
 }
+
+variable "aws_deployment_role" {
+  default = "arn:aws:iam::627315336549:role/atlantis-cbb19113"
+}

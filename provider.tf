@@ -9,5 +9,7 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = var.region
-  shared_credentials_file = "~/.aws/credentials"
+  assume_role {
+    role_arn = var.aws_deployment_role
+  }
 }
